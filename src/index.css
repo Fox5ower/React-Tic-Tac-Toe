@@ -1,13 +1,112 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ol,
+ul {
+  padding: 5px 5px 5px 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  transition: 200ms;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 4px;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 60px;
+  height: 60px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 60px;
+}
+
+.square:hover {
+  transition: 400ms;
+  background-color: rgb(224, 224, 224);
+}
+
+.square:focus {
+  outline: none;
+}
+
+.btnStep {
+  position: relative;
+  transition: 200ms;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 4px;
+  margin: 2px;
+  font-size: 12px;
+  padding: 5px;
+  text-align: center;
+}
+
+.btnStep:hover {
+  transition: 400ms;
+  background-color: rgb(224, 224, 224);
+}
+
+.restartBtn {
+  position: relative;
+  transition: 200ms;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 4px;
+  margin: 40px;
+  font-size: 18px;
+  padding: 5px;
+  text-align: center;
+}
+
+.restartBtn:hover {
+  transition: 400ms;
+  background-color: rgb(224, 224, 224);
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-info {
+  margin-left: 20px;
 }
